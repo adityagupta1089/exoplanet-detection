@@ -167,7 +167,7 @@ if __name__ == "__main__":
     #model.save_weights('weights.hdf5')
     
     #%% write results
-    with open('results2.txt', 'w') as f:
+    with open('results.txt', 'w') as f:
         for y in prediction:
             f.write(str(int(y)) + '\n')
             
