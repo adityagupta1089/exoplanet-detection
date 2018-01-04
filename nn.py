@@ -158,7 +158,7 @@ if __name__ == "__main__":
     print('Training Data:')
     show_stats(model, X_train, Y_train)
     print('Validation Data:')
-    show_stats(model, X_val, Y_val)0
+    show_stats(model, X_val, Y_val)
     
     #%% make predictions
     prediction = np.round(model.predict(X_test).reshape(-1) + 1)
