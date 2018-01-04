@@ -151,7 +151,7 @@ if __name__ == "__main__":
         epochs=10, verbose=1)
     
     #%% load model
-    model.load_weights('weights.hdf5')
+    #model.load_weights('weights.hdf5')
     
     
     #%% show statistics on train & test
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     prediction = np.round(model.predict(X_test).reshape(-1) + 1)
     
     #%% save model weights
-    #model.save_weights('weights.hdf5')
+    model.save_weights('weights.hdf5')
     
     #%% write results
     with open('results.txt', 'w') as f:
