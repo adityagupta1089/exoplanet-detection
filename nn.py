@@ -1,7 +1,7 @@
 import numpy as np
 from keras.models import Sequential
 from keras.layers import MaxPool1D, Conv1D, Dense, Flatten, Dropout
-from random import shuffle
+import random
 
 #%% validation split
 def val_split(X, Y, train_split):
@@ -51,7 +51,7 @@ def get_data(filename, test=False):
         content = np.array(list(list(map(float, line.split(',')))
             for line in content[1:]))
     #%% shuffling the data
-    shuffle(content)
+    random.Random(4).shuffle(content)
 
     #%% process the input
     X = content[:, 1:] if not test else content
